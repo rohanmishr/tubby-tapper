@@ -1,0 +1,82 @@
+<html>
+  <head>
+    <script
+  src="https://code.jquery.com/jquery-3.6.1.js"
+  integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+  crossorigin="anonymous"></script>
+    
+    <title>Tubby Tapper</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="https://freeimage.host/i/HRthY6G">
+    <script src="https://kit.fontawesome.com/795e97cf65.js" crossorigin="anonymous"></script>
+    <script src="suffixes.js"></script>
+  </head>
+  <body>
+
+    <!--top!-->
+    <div id="top">
+    <button id="menuButton" onclick="toggleNav()"> <i class="fas fa-bars fa-2xl"></i> </button>
+    <h2 id="weightDisplay"></h2>
+    <h2 id="rizzDisplay"></h2>
+    <h2 id="title">Tubby Tapper</h2>
+    </div>
+    
+    <!--sidebar!-->
+    <div id="nav">
+      <button class="navButton" id="dash" onclick="navDashboard()">Dashboard</button>
+      <button class="navButton" id="uShop" onclick="navUpgradeShop()">Upgrades</button>
+      <button class="navButton" id="mShop" onclick="navManagerShop()">Managers</button>
+      <button class="navButton" id="inv" onclick="navInventory()">Inventory</button>
+      <button class="navButton" id="asc" onclick="navAscend()">Ascend</button>
+    </div>
+    
+    <div id="main">
+    <hr>
+    <div id="dashboard">
+      <h1>shine clicker</h1>
+      <button id="clicker" onclick="gainWeight()">Gain Weight</button>
+      <hr>
+      <h3>Info</h3>
+      <h4 id="baseClick"></h4>
+      <h4 id="clickMult"></h4>
+      <h4 id="weightGainPerClick"></h4>
+    </div>
+
+    <div id="upgradeShop">
+      <h1>Upgrades</h1>
+      <h3>Clicker Upgrades</h3>
+      <button class="shopButton" onclick="buyUpgrade('bronzeClicker')" id="bronzeClicker">Bronze Clicker (100)</button><br>
+      <button class="shopButton" onclick="buyUpgrade('silverClicker')" id="silverClicker">Silver Clicker (1k)</button><br>
+      <button class="shopButton" onclick="buyUpgrade('goldClicker')" id="goldClicker">Gold Clicker (10k)</button><br>
+      <button class="shopButton" onclick="buyUpgrade('rubyClicker')" id="rubyClicker">Ruby Clicker (100k)</button><br>
+      <button class="shopButton" onclick="buyUpgrade('sapphireClicker')" id="sapphireClicker">Sapphire Clicker (1M)</button><br>
+      <button class="shopButton" onclick="buyUpgrade('emeraldClicker')" id="emeraldClicker">Emerald Clicker (10M)</button><br>
+      <h3>Overall Upgrades</h3>
+      <button class="shopButton" onclick="buyUpgrade('packagedChips')" id="packagedChips">Packaged Chips (200)</button><br>
+      <button class="shopButton" onclick="buyUpgrade('burgersAndFries')" id="burgersAndFries">Burgers and Fries (500)</button><br>
+      <button class="shopButton" onclick="buyUpgrade('xlMilkshake')" id="xlMilkshake">XL Milkshake (1000)</button><br>
+      <button class="shopButton" onclick="buyUpgrade('doubleStuffedOreos')" id="doubleStuffedOreos">Double Stuffed Oreos (2500)</button><br>
+      <button class="shopButton" onclick="buyUpgrade('weightGainingProgram')" id="weightGainingProgram">Weight Gaining Program (5000)</button>
+      <h3>Manager Upgrades</h3>
+    </div>
+
+    <div id="managerShop">
+      <h1>Managers</h1>
+      <h3>Managers help you gain weight and lose rizz automatically!</h3>
+      <button class="shopButton" onclick="buyManager('chef')" id="chef">Chef (250)</button><br>
+    </div>
+
+    <div id="inventory">
+      <h1>Inventory</h1>
+    </div>
+
+    <div id="ascend">
+      <h1>Ascend</h1>
+      <h3>Sacrifice everything you have in return for extremely powerful items!</h3>
+      <h2>Current ascent price: 25Qn lbs.</h2>
+      <button id="ascendButton">Ascend!</button>
+    </div>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
