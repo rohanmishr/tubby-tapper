@@ -1,0 +1,39 @@
+.shopButton{
+    height:50px;
+    width:50px;
+    position: relative;
+    display: inline-block;
+}
+
+.shopButton .tooltiptext{
+  visibility: hidden;
+  background-color: gray;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+  width: 120px;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -50px;
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+
+.shopButton .tooltiptext::after {
+    content: " ";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: gray transparent transparent transparent;
+}
+
+.shopButton:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
