@@ -1,0 +1,9 @@
+var data_clickerRank;
+var data_weight;
+var data_ownedUpgrades;
+var data_chefs;
+var data_chefPrice;
+var data_badHealthAdvisors;
+var data_badHealthAdvisorPrice;
+var data_discordMods;
+var data_discordModPrice;
