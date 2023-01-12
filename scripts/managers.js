@@ -10,7 +10,7 @@ function managerPurchaseHandler(m){
     weight -= m.price;
     m.amount += 1;
     m.price *= 1.1;
-    var htmlSelector = "#"+m.rawName;
+    var htmlSelector = "#"+m.rawName+"-text";
     $(htmlSelector).text(m.name+" ("+abbvNum(m.price)+")");
 
 }
@@ -26,6 +26,6 @@ function buyManager(manager){
     }else if(manager=="badHealthAdvisors" && weight >= badHealthAdvisors.price){
       managerPurchaseHandler(badHealthAdvisors)
     }else if(manager="discordMods" && weight >= discordMods.price){
-      managerPurchaseHandler("discordMods");
+      managerPurchaseHandler(discordMods);
     }
 }
