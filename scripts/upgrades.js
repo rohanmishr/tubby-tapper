@@ -45,7 +45,31 @@ function buyUpgrade(upgrade){
         baseWeightGain = 1953125;
         clickerRank = 10;
         $("#platinumClicker").css("display","none");
-
+    }else if(upgrade == "plutoniumClicker" && weight >= decodeNum('100B')){
+        weight -= decodeNum('100B');
+        baseWeightGain = 9765625;
+        clickerRank = 11;
+        $("#plutoniumClicker").css("display","none");
+    }else if(upgrade == "opalClicker" && weight >= decodeNum('1T')){
+        weight -= decodeNum('1T');
+        baseWeightGain = 48828125;
+        clickerRank = 12;
+        $("#opalClicker").css("display","none");
+    }else if(upgrade == "titaniumClicker" && weight >= decodeNum('10T')){
+        weight -= decodeNum('10T');
+        baseWeightGain = 244140625;
+        clickerRank = 13;
+        $("#titaniumClicker").css("display","none");
+    }else if(upgrade == "mithrilClicker" && weight >= decodeNum('100T')){
+        weight -= decodeNum('100T');
+        baseWeightGain = 1220703125;
+        clickerRank = 14;
+        $("#mithrilClicker").css("display","none");
+    }else if(upgrade == "firecrystalClicker" && weight >= decodeNum('1qd')){
+        weight -= decodeNum('1qd');
+        baseWeightGain = 6103515625;
+        clickerRank = 15;
+        $("#firecrystalClicker").css("display","none");
     //overall upgrades
     }else if(upgrade == "packagedChips" && weight >= 200){
       weight -= 200;
