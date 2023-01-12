@@ -60,6 +60,7 @@ var weight = 130;
 var rizz = 100;
 
 var clickerRank = 1;
+
 var baseWeightGain = 1;
 var weightMultiplier = 1;
 var clickWeight = baseWeightGain * weightMultiplier;
