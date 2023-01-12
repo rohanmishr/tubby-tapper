@@ -1,11 +1,61 @@
+@import url('https://fonts.cdnfonts.com/css/proxima-nova-2');
+
 .shopButton{
+    font-family: "Proxima Nova", sans-serif;
     height:50px;
     width:50px;
     position: relative;
     display: inline-block;
+    border-width: 3px;
+    border-style: solid;
+    border-color: gray;
+    border-radius: 5px;
 }
 
-.shopButton .tooltiptext{
+.managerButton{
+    font-family: "Proxima Nova", sans-serif;
+    height:75px;
+    width:200px;
+    position: relative;
+    display: block;
+}
+
+.managerButton .buttons-manager-text{
+  float:right;
+}
+
+#chefs-text{
+  margin-right: 10px;
+  margin-top:15px;
+}
+
+#badHealthAdvisors-text{
+  margin-top:20px;
+}
+
+.buttons-upgrades-clickers-img{
+  float:center;
+  width: 20px;
+}
+
+#img-chef{
+  float:left;
+  width: 30px;
+  height: 50px;
+}
+
+#img-badHealthAdvisor{
+  float:left;
+  margin-top:10px;
+  width:25px;  
+  height: 50px;
+}
+
+#img-discordMod{
+  float:left;
+}
+
+.shopButton .tooltiptext, .managerButton .tooltiptext{
   visibility: hidden;
   background-color: gray;
   color: #fff;
@@ -22,7 +72,7 @@
   transition: opacity 0.4s;
 }
 
-.shopButton .tooltiptext::after {
+.shopButton .tooltiptext::after, .managerButton .tooltiptext::after{
     content: " ";
     position: absolute;
     top: 100%;
@@ -33,7 +83,8 @@
     border-color: gray transparent transparent transparent;
 }
 
-.shopButton:hover .tooltiptext {
+.shopButton:hover .tooltiptext, .managerButton:hover .tooltiptext{
     visibility: visible;
     opacity: 1;
 }
+
