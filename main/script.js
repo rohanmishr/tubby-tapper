@@ -1,6 +1,22 @@
+var pwd;
+var developerMode = false;
+function secret(){
+  pwd = window.prompt("Activate developer mode >> enter password:");
+  if(pwd == "Patrick200lbs"){
+    
+    alert("Developer mode activated");
+    developerMode = true;
+  }else {
+    alert("Incorrect password. Try again or quit.")
+    
+  }
+}
+
+
 //NAV STUFF
 var tab = "dash";
 var navState = false;
+
 
 function toggleNav(){
   if(navState === false){
@@ -55,8 +71,14 @@ function navManagerShop(){
   $("#mShop").css("background-color","#9900ff");
 }
 
-//main
-var weight = 130;
+
+ /* var weight = localStorage.getItem("weight");
+    if (weight == null) {
+        weight = 100;
+    }
+*/
+//var weight = <?php echo $weight; ?>;
+var weight = 187;
 var rizz = 100;
 
 var clickerRank = 1;
@@ -67,10 +89,11 @@ var clickWeight = baseWeightGain * weightMultiplier;
 
 var passiveGain = 0;
 
+
 setInterval(function(){
   clickWeight = baseWeightGain * weightMultiplier;
                         
-  passiveGain = (chefs.amount * chefs.boost) + (badHealthAdvisors.amount * badHealthAdvisors.boost);
+  passiveGain = (chefs.amount * chefs.boost) + (badHealthAdvisors.amount * badHealthAdvisors.boost) + (discordMods.amount * discordMods.boost) + (testThing.amount * testThing.boost);
 },1);
 
 function gainWeight(){
@@ -91,7 +114,15 @@ setInterval(function(){
 $("#baseClick").text("Base click weight gain: " + abbvNum(baseWeightGain));
   $("#clickMult").text("Weight gain multiplier: " + abbvNum(weightMultiplier));
   $("#weightGainPerClick").text("Total weight gain/click: " + abbvNum(clickWeight));
+  $('#Info').text("Info");
+  $('#tubbyTapper').text("Tubby Tapper");
 
+  if(developerMode === true){
+
+    $("#developerConsole").css("display", "block");
+  }else{
+    $("#developerConsole").css("display", "none");
+  }
   if(clickerRank == 1){
     $("#clicker").css("background-color","white");
   }else if(clickerRank == 2){
@@ -137,3 +168,4 @@ $("#baseClick").text("Base click weight gain: " + abbvNum(baseWeightGain));
     $("#managerShop").css("display", "none");
   }
 },1);
+

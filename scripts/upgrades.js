@@ -1,7 +1,7 @@
 function buyUpgrade(upgrade){
     //clicker ranks
-    if(upgrade=="bronzeClicker" && weight >= 100){
-      weight -= 100;
+    if(upgrade=="bronzeClicker" && weight >= 250){
+      weight -= 250;
       baseWeightGain = 5;
       clickerRank = 2;
       $("#bronzeClicker").css("display","none");
@@ -95,5 +95,9 @@ function buyUpgrade(upgrade){
         weight -= 12000;
         weightMultiplier *= 1.5;
         $("#discordServer").css("display","none");
+    }else if(upgrade == "fatImplant" && weight >= 25000){
+        weight -= 25000;
+        weightMultiplier *= 1.5;
+        $("#fatImplant").css("display","none");
     }
-  }
+}
