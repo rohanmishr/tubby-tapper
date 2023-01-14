@@ -77,7 +77,7 @@ function navManagerShop(){
     }
 */
 //var weight = <?php echo $weight; ?>;
-var weight = 187;
+var weight = localStorage.getItem('weight');
 var rizz = 100;
 
 var clickerRank = 1;

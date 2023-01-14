@@ -9,5 +9,5 @@ function clearData(){
 }
 
 function manualSave(){
-  alert('wip');
+  localStorage.setItem('weight', '100');
 }
