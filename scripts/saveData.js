@@ -8,6 +8,7 @@ function clearData(){
   }
 }
 
-function manualSave(){
-  localStorage.setItem('weight', '100');
+function manualSave(){ 
+  alert("WIP");
 }
+
