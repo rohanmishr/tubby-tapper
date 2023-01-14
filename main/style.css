@@ -91,14 +91,59 @@ body{
 }
 
 #clicker{
-  font-family: "Proxima Nova", sans-serif;
+  background-image: url('https://freeimage.host/i/HRthY6G');
+  font-family: 'Proxima Nova', sans-serif;
   border-color:gray;
-  height:60px;
-  width:60px;
-  border-radius:5px;
+  height: 250px;
+  border-radius:40px;
+  margin: center;
+  width: 100%;
+  font-size: 30px
 }
 
 #clicker:hover{
-  border-color:#c2c2c2;
-  transition-duration: 0.4s;
+  transition-duration: 1s;
+  border: 50px;
+}
+
+
+#baseClick{
+  font-size: 25px;
+  font-family: 'Proxima Nova', sans-serif;
+  color: white;
+  text-align: center;
+  margin-top: 100px;
+}
+
+#clickMult{
+  font-size: 25px;
+  font-family: 'Proxima Nova', sans-serif;
+  color: white;
+  text-align: center;
+  margin-top: 10px;
+}
+
+#Info{
+  font-size: 25px;
+  font-family: 'Proxima Nova', sans-serif;
+  color: white;
+  text-align: center;
+  margin-top: 10px;
+}
+
+#weightGainPerClick{
+  font-size: 25px;
+  font-family: 'Proxima Nova', sans-serif;
+  color: white;
+  text-align: center;
+  margin-top: 10px;
+}
+
+#tubbyTapper{
+  font-size: 25px;
+  font-family: 'Proxima Nova', sans-serif;
+  color: white;
+  text-align: center;
+  margin-top: 10px;
+  
 }

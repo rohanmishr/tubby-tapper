@@ -1,34 +1,35 @@
 <html>
   <head>
-    <script
-  src="https://code.jquery.com/jquery-3.6.1.js"
-  integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
-  crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
     <title>Tubby Tapper</title>
     <link rel="icon" href="https://freeimage.host/i/HRthY6G">
+    <link href="https://fonts.cdnfonts.com/css/proxima-nova-2" rel="stylesheet">
     <script src="https://kit.fontawesome.com/795e97cf65.js" crossorigin="anonymous"></script>
-
     <!-- css links -->
     <link rel="stylesheet" href="main/style.css">
     <link rel="stylesheet" href="css/upgrade-buttons.css">
-
     <!-- js links -->
     <script src="scripts/suffixes.js"></script>
     <script src="scripts/managers.js"></script>
     <script src="scripts/upgrades.js"></script>
+    <script src="scripts/saveData.js"></script>
+    <script src="scripts/achievements.js"></script>
   </head>
   <body>
-
     <!--top!-->
     <div id="top">
-    <button id="menuButton" onclick="toggleNav()"> <i class="fas fa-bars fa-2xl"></i> </button>
-    <h2 id="weightDisplay"></h2>
-    <h2 id="rizzDisplay"></h2>
-    <h2 id="title">Tubby Tapper</h2>
+      <button id="menuButton" onclick="toggleNav()">
+        <i class="fas fa-bars fa-2xl"></i>
+      </button>
+      <h2 id="weightDisplay"></h2>
+      <h2 id="rizzDisplay"></h2>
+      <button id="saveButton" onclick="manualSave()">Save Data (UNSTABLE)</button>
+      <button id="saveClearButton" onclick="clearData();">Clear Data (UNSTABLE)</button>
+      <h2 id="title">Tubby Tapper</h2>
     </div>
-    
     <!--sidebar!-->
     <div id="nav">
+      <button class="navButton" onclick="secret()">very secret button</button>
       <button class="navButton" id="dash" onclick="navDashboard()">Dashboard</button>
       <button class="navButton" id="uShop" onclick="navUpgradeShop()">Upgrades</button>
       <button class="navButton" id="mShop" onclick="navManagerShop()">Managers</button>
@@ -36,7 +37,7 @@
       <button class="navButton" id="asc" onclick="navAscend()">Ascend</button>
     </div>
     
-    <div id="main"> 
+    <div id="main">
     <hr>
     <div id="dashboard">
       <h1>Tubby Tapper</h1>
