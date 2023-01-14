@@ -1,84 +1,4 @@
-var pwd;
-var developerMode = false;
-function secret(){
-  pwd = window.prompt("Activate developer mode >> enter password:");
-  if(pwd == "Patrick200lbs"){
-    
-    alert("Developer mode activated");
-    developerMode = true;
-  }else {
-    alert("Incorrect password. Try again or quit.")
-    
-  }
-}
-
-
-//NAV STUFF
-var tab = "dash";
-var navState = false;
-
-
-function toggleNav(){
-  if(navState === false){
-    $("#nav").css("width", "0px");
-    $("#main").css("margin-left", "0px");
-    navState = true;
-  }else if(navState === true){
-    $("#nav").css("width", "125px");
-    $("#main").css("margin-left", "125px");
-    navState = false;
-  }
-}
-
-function navDashboard(){
-  tab="dash";
-  $("#uShop").css("background-color","white");
-  $("#dash").css("background-color","#9900ff");
-  $("#inv").css("background-color","white");
-  $("#asc").css("background-color","white");
-  $("#mShop").css("background-color","white");
-}
-function navInventory(){
-  tab="inv";
-  $("#uShop").css("background-color","white");
-  $("#dash").css("background-color","white");
-  $("#inv").css("background-color","#9900ff");
-  $("#asc").css("background-color","white");
-  $("#mShop").css("background-color","white");
-}
-function navUpgradeShop(){
-  tab="uShop";
-  $("#uShop").css("background-color","#9900ff");
-  $("#dash").css("background-color","white");
-  $("#inv").css("background-color","white");
-  $("#asc").css("background-color","white");
-  $("#mShop").css("background-color","white");
-}
-function navAscend(){
-  tab="asc";
-  $("#uShop").css("background-color","white");
-  $("#dash").css("background-color","white");
-  $("#inv").css("background-color","white");
-  $("#asc").css("background-color","#9900ff");
-  $("#mShop").css("background-color","white");
-}
-function navManagerShop(){
-  tab="mShop";
-  $("#uShop").css("background-color","white");
-  $("#dash").css("background-color","white");
-  $("#inv").css("background-color","white");
-  $("#asc").css("background-color","white");
-  $("#mShop").css("background-color","#9900ff");
-}
-
-
- /* var weight = localStorage.getItem("weight");
-    if (weight == null) {
-        weight = 100;
-    }
-*/
-//var weight = <?php echo $weight; ?>;
-var weight = 187;
+var weight = localStorage.getItem("weight") || 187;
 var rizz = 100;
 
 var clickerRank = 1;
@@ -98,6 +18,7 @@ setInterval(function(){
 
 function gainWeight(){
   weight += clickWeight;
+  localStorage.setItem("weight", weight);
 }
 
 //loop 
@@ -107,9 +28,11 @@ setInterval(function(){
 
 //loop main
 setInterval(function(){
-  document.getElementById("weightDisplay").innerHTML = abbvNum(weight, 1) + " lbs";
+  document.getElementById("weightDisplay").innerHTML = localStorage.getItem("weight") + "lbs";
   document.getElementById("rizzDisplay").innerHTML = abbvNum(rizz, 1) + "% rizz";
   rizz = 100 - 0.5*((weight-130)/2);
+}, 1000);
+
   
 $("#baseClick").text("Base click weight gain: " + abbvNum(baseWeightGain));
   $("#clickMult").text("Weight gain multiplier: " + abbvNum(weightMultiplier));
@@ -167,5 +90,4 @@ $("#baseClick").text("Base click weight gain: " + abbvNum(baseWeightGain));
   }else{
     $("#managerShop").css("display", "none");
   }
-},1);
-
+;1;
