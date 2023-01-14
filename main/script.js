@@ -78,7 +78,7 @@ function navManagerShop(){
     }
 */
 //var weight = <?php echo $weight; ?>;
-var weight = 187;
+var weight = localStorage.getItem("weight") || 187;
 var rizz = 100;
 
 var clickerRank = 1;
@@ -98,6 +98,7 @@ setInterval(function(){
 
 function gainWeight(){
   weight += clickWeight;
+  localStorage.setItem("weight", weight);
 }
 
 //loop 
@@ -110,7 +111,8 @@ setInterval(function(){
   document.getElementById("weightDisplay").innerHTML = abbvNum(weight, 1) + " lbs";
   document.getElementById("rizzDisplay").innerHTML = abbvNum(rizz, 1) + "% rizz";
   rizz = 100 - 0.5*((weight-130)/2);
-  
+}
+
 $("#baseClick").text("Base click weight gain: " + abbvNum(baseWeightGain));
   $("#clickMult").text("Weight gain multiplier: " + abbvNum(weightMultiplier));
   $("#weightGainPerClick").text("Total weight gain/click: " + abbvNum(clickWeight));
