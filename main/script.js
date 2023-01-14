@@ -1,20 +1,41 @@
 var pwd;
 var developerMode = false;
-function secret(){
+/*function secret(){
   pwd = window.prompt("Activate developer mode >> enter password:");
   if(pwd == "Patrick200lbs"){
+    
     
     alert("Developer mode activated");
     developerMode = true;
   }else {
+    
     alert("Incorrect password. Try again or quit.")
     
   }
 }
 
+function getPassword() {
+  const val = document.querySelector('devPass').value;
+  if(val == "Patrick200lbs"){
+    alert("Developer mode activated");
+    developerMode = true;
+}else {
+  alert("Incorrect password. Try again or quit.")
+}
+}*/
+function checkPassword() {
+  var passwordInput = document.getElementById("passwordInput").value;
+  if (passwordInput === "Patrick200lbs") {
+    developerMode = true;
+    alert("Devmode enabled");
+  } else {
+    alert("Incorrect password try again or quit");
+  }
+}
 
 //NAV STUFF
 var tab = "dash";
+
 var navState = false;
 
 function toggleNav(){
@@ -71,13 +92,14 @@ function navManagerShop(){
 }
 
 
- /* var weight = localStorage.getItem("weight");
+  var weight = localStorage.getItem("weight");
     if (weight == null) {
         weight = 100;
     }
-*/
+    localStorage.setItem("weight", weight);
 //var weight = <?php echo $weight; ?>;
-var weight = localStorage.getItem('weight');
+var weight = 187;
+localStorage.setItem("weight", weight);
 var rizz = 100;
 
 var clickerRank = 1;
@@ -98,7 +120,9 @@ setInterval(function(){
 function gainWeight(){
   weight += clickWeight;
 }
-
+if (weight == null) {
+  weight = 187;
+}
 //loop 
 setInterval(function(){
   weight+=passiveGain;
@@ -106,12 +130,12 @@ setInterval(function(){
 
 //loop main
 setInterval(function(){
-  document.getElementById("weightDisplay").innerHTML = abbvNum(weight, 1) + " lbs";
+  document.getElementById("weightDisplay").innerHTML = localStorage.getItem("weight");
   document.getElementById("rizzDisplay").innerHTML = abbvNum(rizz, 1) + "% rizz";
   rizz = 100 - 0.5*((weight-130)/2);
   
 $("#baseClick").text("Base click weight gain: " + abbvNum(baseWeightGain));
-  $("#clickMult").text("Weight gain multiplier: " + abbvNum(weightMultiplier));
+  $("#clickMult").text("Weight gain multiplier: " + abbv4Num(weightMultiplier));
   $("#weightGainPerClick").text("Total weight gain/click: " + abbvNum(clickWeight));
   $('#Info').text("Info");
   $('#tubbyTapper').text("Tubby Tapper");
