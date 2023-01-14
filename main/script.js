@@ -1,6 +1,6 @@
 var pwd;
 var developerMode = false;
-function secret(){
+/*function secret(){
   pwd = window.prompt("Activate developer mode >> enter password:");
   if(pwd == "Patrick200lbs"){
     
@@ -11,7 +11,17 @@ function secret(){
     
   }
 }
-
+*/
+function checkPassword() {
+  var passwordInput = document.getElementById("devInput").value;
+  if (passwordInput === "Patrick200lbs") {
+    developerMode = true;
+    alert("Devmode enabled");
+  } else {
+    alert("Incorrect password");
+    document.getElementById('myInput').value = '';
+  }
+}
 
 //NAV STUFF
 var tab = "dash";

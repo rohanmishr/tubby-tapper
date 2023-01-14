@@ -147,3 +147,17 @@ body{
   margin-top: 10px;
   
 }
+#button{
+  font-family: 'Proxima Nova', sans-serif;
+  border-color:rgb(226, 38, 38);
+  height: 50px;
+  border-radius:40px;
+  margin: center;
+  width: 100%;
+  font-size: 10px
+}
+  
+#button:hover{
+  transition-duration: 1s;
+  border: 50px;
+}

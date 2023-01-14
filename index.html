@@ -29,7 +29,8 @@
     </div>
     <!--sidebar!-->
     <div id="nav">
-      <button class="navButton" onclick="secret()">very secret button</button>
+      <input type="password" onfocus= "clearInput(this)" id="devInput">
+      <button id="button" type="button" onclick="checkPassword()">very secret button</button>
       <button class="navButton" id="dash" onclick="navDashboard()">Dashboard</button>
       <button class="navButton" id="uShop" onclick="navUpgradeShop()">Upgrades</button>
       <button class="navButton" id="mShop" onclick="navManagerShop()">Managers</button>
@@ -62,7 +63,17 @@
       <hr> 
       <div id="dashboard">
         <h1 id=tubbyTapper></h1>
-        <button id="clicker" onclick="gainWeight()">Gain Weight</button>
+        <button class="clicker" id="clicker" onclick="gainWeight()">Gain Weight</button>
+        <style>
+          #clicker {
+              background-image: url(
+  'https://iili.io/HYhPN94.jpg');
+              background-size: cover;
+              width: 1000px;
+              height: 1000px;
+              font-size: 2rem;
+          }
+      </style>
         <hr>
         <h3 id=Info></h3>
         <hr>
