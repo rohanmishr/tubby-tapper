@@ -18,8 +18,8 @@ function managerPurchaseHandler(m){
 //list of managers
 var chefs = new manager("chefs", "Chef", 250, 50, 0);
 var badHealthAdvisors = new manager("badHealthAdvisors", "Bad Health Advisors", 1500, 250, 0);
-var discordMods = new manager("discordMods", "Discord Mods", 1000, 500, 0);
-var testThing = new manager("testThing", "Test Thing", 1, 1000, 0);
+var discordMods = new manager("discordMods", "Discord Mods", 6000, 550, 0);
+var fatSurgeons = new manager("fatSurgeons", "Fat Surgeons", 25000, 1300, 0);
 
 function buyManager(manager){
   //buying chefs
@@ -31,9 +31,8 @@ function buyManager(manager){
   //buying discord mods
   }else if(manager="discordMods" && weight >= discordMods.price){
     managerPurchaseHandler(discordMods)
- // buying test thing
-  }else if(manager="testThing" && weight >= testThing.price){
-    managerPurchaseHandler(testThing)
+ // buying fat surgeons
+  }else if(manager="fatSurgeons" && weight >= fatSurgeons.price){
+    managerPurchaseHandler(fatSurgeons)
   }
-
 }
