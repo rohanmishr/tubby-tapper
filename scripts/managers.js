@@ -18,7 +18,7 @@ function managerPurchaseHandler(m){
 //list of managers
 var chefs = new manager("chefs", "Chef", 250, 50, 0);
 var badHealthAdvisors = new manager("badHealthAdvisors", "Bad Health Advisors", 1500, 250, 0);
-var discordMods = new manager("discordMods", "Discord Mods", 6000, 550, 0);
+var discordMods = new manager("discordMods", "Discord Mods", 5000, 550, 0);
 var fatSurgeons = new manager("fatSurgeons", "Fat Surgeons", 25000, 1300, 0);
 
 function buyManager(manager){
