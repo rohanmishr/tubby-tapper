@@ -78,7 +78,7 @@ function navManagerShop(){
     }
 */
 //var weight = <?php echo $weight; ?>;
-var weight = 187;
+var weight = 130;
 var rizz = 100;
 
 var clickerRank = 1;
@@ -91,9 +91,8 @@ var passiveGain = 0;
 
 
 setInterval(function(){
-  clickWeight = baseWeightGain * weightMultiplier;
-                        
-  passiveGain = (chefs.amount * chefs.boost) + (badHealthAdvisors.amount * badHealthAdvisors.boost) + (discordMods.amount * discordMods.boost) + (testThing.amount * testThing.boost);
+  clickWeight = baseWeightGain * weightMultiplier;                    
+  passiveGain = weightMultiplier * ((chefs.amount * chefs.boost) + (badHealthAdvisors.amount * badHealthAdvisors.boost) + (discordMods.amount * discordMods.boost) + (fatSurgeons.amount * fatSurgeons.boost) + (gamers.amount * gamers.boost));
 },1);
 
 function gainWeight(){
