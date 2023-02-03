@@ -11,3 +11,7 @@ function achievement(name, lbReq, rizzReq, pts){
     }
     this.pts = pts;
   }
+
+if(rizz == -infinity) {
+    alert("You have become patrick")
+}
