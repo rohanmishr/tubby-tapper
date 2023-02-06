@@ -1,0 +1,55 @@
+.inventory-button{
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    border: solid 5px;
+}
+
+.inventory-button common{
+    border: solid gray 5px;
+}
+
+.inventory-button uncommon{
+    border: solid #52ff61
+}
+
+.inventory-button rare{
+    border: solid rgb(47, 61, 255) 5px;
+}
+
+.inventory-button epic{
+    border: solid rgb(180, 0, 141) 5px;
+}
+
+.inventory-button legendary{
+    border: solid rgb(255, 221, 0) 5px;
+}
+
+.inventory-button mythic{
+    border: solid rgb(225, 0, 255) 5px;
+}
+
+.inventory-button divine{
+    border: solid rgb(255, 0, 149) 5px;
+}
+
+.inventory-button almighty{
+    border: solid rgb(27, 0, 124) 5px;
+}
+
+/* ascended tiers */
+.inventory-button heavenly{
+    border: solid rgb(158, 255, 250) 5px;
+}
+
+.inventory-button angelic{ /* evolved heavenly */
+    border: solid #c7f4ff
+}
+
+.inventory-button enchanted{ /* crafted with several hard to obtain items */
+    border: solid hsl(0, 100%, 73%) 5px;
+}
+
+.inventory-button supreme{ /* crafted with many harder to obtain items */
+    border: solid rgb(151, 0, 0) 5px;
+}
