@@ -48,8 +48,12 @@
           if(cmd == "addweight"){ 
             var num = parseInt(prompt('Enter the weight'));
             weight += num;
+          }else if(cmd == "help"){
+            alert("\naddweight - adds weight to your total weight\nhelp - shows this message\n")
+          }  else{
+            alert("Invalid command, type help for a list of commands");
           }
-          }  
+        }
       </script>
       <hr> 
       <div id="dashboard">
