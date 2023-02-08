@@ -70,7 +70,6 @@ function buyUpgrade(upgrade){
       baseWeightGain = 6103515625;
       clickerRank = 15;
       $("#firecrystalClicker").css("display","none");
-
   //overall upgrades
   }else if(upgrade == "packagedChips" && weight >= 200){
     weight -= 200;
