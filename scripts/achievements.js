@@ -12,6 +12,6 @@ function achievement(name, lbReq, rizzReq, pts){
     this.pts = pts;
   }
 
-if (weight >= 200) {
-  alert("Weight is greater than or equal to 200");
+if(rizz == -infinity) {
+    alert("You have become patrick")
 }

@@ -1,0 +1,77 @@
+<link rel="stylesheet" href="experiment.css">
+
+<canvas id="canvas" width=800px; height=500px;></canvas>
+<div id="shop">
+    <h1>Shop</h1>
+    <button onclick="exitShop();">Exit shop</button>
+    <h1>Upgrades</h1>
+        <h3>Clicker Upgrades</h3>
+        <button class="shopButton" onclick="buyUpgrade('bronzeClicker')" id="bronzeClicker">
+          <img class="buttons-upgrades-clickers-img" src="assets/clickers/bronzeClicker.png"></img>
+          <span class="tooltiptext">Bronze Clicker (250 lbs)</span>
+        </button>
+        <button class="shopButton" onclick="buyUpgrade('silverClicker')" id="silverClicker">
+          <img class="buttons-upgrades-clickers-img" src="assets/clickers/silverClicker.png">
+          <span class="tooltiptext">Silver Clicker (1K lbs)</span>
+        </button>
+        <button class="shopButton" onclick="buyUpgrade('goldClicker')" id="goldClicker">
+          <img class="buttons-upgrades-clickers-img" src="assets/clickers/goldClicker.png">
+          <span class="tooltiptext">Gold Clicker (10K lbs)</span>
+        </button>
+        <button class="shopButton" onclick="buyUpgrade('rubyClicker')" id="rubyClicker">
+          <img class="buttons-upgrades-clickers-img" src="assets/clickers/rubyClicker.png">
+          <span class="tooltiptext">Ruby Clicker (100K lbs)</span>
+        </button>
+        <button class="shopButton" onclick="buyUpgrade('sapphireClicker')" id="sapphireClicker">
+          <img class="buttons-upgrades-clickers-img" src="assets/clickers/sapphireClicker.png">
+          <span class="tooltiptext">Sapphire Clicker (1M lbs)</span>
+        </button>
+        <button class="shopButton" onclick="buyUpgrade('emeraldClicker')" id="emeraldClicker">
+          <img class="buttons-upgrades-clickers-img" src="assets/clickers/emeraldClicker.png"></img>
+          <span class="tooltiptext">Emerald Clicker (10M lbs)</span>
+        </button>
+        <button class="shopButton" onclick="buyUpgrade('diamondClicker')" id="diamondClicker">
+          <img class="buttons-upgrades-clickers-img" src="assets/clickers/diamondClicker.png"></img>
+          <span class="tooltiptext">Diamond Clicker (100M lbs)</span>
+        </button>
+        <br>
+        <button class="shopButton" onclick="buyUpgrade('amethystClicker')" id="amethystClicker">
+          <img class="buttons-upgrades-clickers-img" src="assets/clickers/amethystClicker.png"></img>
+          <span class="tooltiptext">Amethyst Clicker (1B lbs)</span>
+        </button>
+        <button class="shopButton" onclick="buyUpgrade('platinumClicker')" id="platinumClicker">
+          <img class="buttons-upgrades-clickers-img" src="assets/clickers/platinumClicker.png"></img>
+          <span class="tooltiptext">Platinum Clicker (10B lbs)</span>
+        </button>
+        <button class="shopButton" onclick="buyUpgrade('plutoniumClicker')" id="plutoniumClicker">
+          <img class="buttons-upgrades-clickers-img" src="assets/clickers/plutoniumClicker.png"></img>
+          <span class="tooltiptext">Plutonium Clicker (100B lbs)</span>
+        </button>
+        <button class="shopButton" onclick="buyUpgrade('opalClicker')" id="opalClicker">
+          <img class="buttons-upgrades-clickers-img" src="assets/clickers/opalClicker.png"></img>
+          <span class="tooltiptext">Opal Clicker (1T lbs)</span>
+        </button>
+        <button class="shopButton" onclick="buyUpgrade('titaniumClicker')" id="titaniumClicker">Titanium Clicker (10T) <span class="tooltiptext">Titanium Clicker (10T lbs)</span>
+        </button>
+        <button class="shopButton" onclick="buyUpgrade('mithrilClicker')" id="mithrilClicker">Mithril Clicker (100T) <span class="tooltiptext">Mithril Clicker (100T lbs)</span>
+        </button>
+        <button class="shopButton" onclick="buyUpgrade('firecrystalClicker')" id="firecrystalClicker">Firecrystal Clicker (1qd) <span class="tooltiptext">Firecrystal Clicker (1qd lbs)</span>
+        </button>
+        <h3>Overall Upgrades</h3>
+        <button class="shopButton" onclick="buyUpgrade('packagedChips')" id="packagedChips">Packaged Chips (200)</button>
+        <button class="shopButton" onclick="buyUpgrade('burgersAndFries')" id="burgersAndFries">Burgers and Fries (500)</button>
+        <button class="shopButton" onclick="buyUpgrade('xlMilkshake')" id="xlMilkshake">XL Milkshake (1000)</button>
+        <button class="shopButton" onclick="buyUpgrade('doubleStuffedOreos')" id="doubleStuffedOreos">Double Stuffed Oreos (2500)</button>
+        <button class="shopButton" onclick="buyUpgrade('weightGainingProgram')" id="weightGainingProgram">Weight Gaining Program (5000)</button>
+        <button class="shopButton" onclick="buyUpgrade('discordServer')" id="discordServer">Discord Server (12000)</button>
+        <button class="shopButton" onclick="buyUpgrade('fatImplant')" id="fatImplant">Fat Implant (25000)</button>
+        <button class="shopButton" onclick="buyUpgrade('KFC')" id="kfc">KFC (55000)</button>
+        <button class="shopButton" onclick="buyUpgrade('raidShadowLegends')" id="raidShadowLegends">Raid Shadow Legends (100k)</button>
+        <button class="shopButton" onclick="buyUpgrade('bigMac')" id="bigMac">Big Mac (187k)</button>
+        <button class="shopButton" onclick="buyUpgrade('obamaFriedChicken')" id="obamaFriedChicken">Obama Fried Chicken (350k)</button>
+        <button class="shopButton" onclick="buyUpgrade('supermassiveDonut')" id="supermassiveDonut">Supermassive Donut (590k)</button>
+        <button class="shopButton" onclick="buyUpgrade('burgerKingFranchise')" id="burgerKingFranchise">Burger King Franchise (1M)</button>
+        <h3>Manager Upgrades</h3>
+</div>
+
+<script src="map.js"></script>

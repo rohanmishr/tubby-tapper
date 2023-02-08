@@ -8,6 +8,7 @@ function clearData(){
   }
 }
 
-function manualSave(){
-  alert('wip');
+function manualSave(){ 
+  alert("WIP");
 }
+

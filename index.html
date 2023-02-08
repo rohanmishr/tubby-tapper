@@ -8,12 +8,17 @@
     <!-- css links -->
     <link rel="stylesheet" href="main/style.css">
     <link rel="stylesheet" href="css/upgrade-buttons.css">
+    <link rel="stylesheet" href="css/inventory-buttons.css">
     <!-- js links -->
     <script src="scripts/suffixes.js"></script>
     <script src="scripts/managers.js"></script>
     <script src="scripts/upgrades.js"></script>
     <script src="scripts/saveData.js"></script>
     <script src="scripts/achievements.js"></script>
+    <script src="scripts/items/items.js"></script>
+    <script src="scripts/events.js"></script>
+    <script src="scripts/items/crafting.js"></script>
+    <script src="scripts/items/resources.js"></script>
   </head>
   <body>
     <!--top!-->
@@ -41,30 +46,25 @@
         <button onclick="onClick()", id="devConsole">Commands</button> 
       </div>
       <script>
-        
         function onClick() {
-          cmd = window.prompt("Pleae type in your command");
+          cmd = window.prompt("Please type in your command");
           
           if(cmd == "addweight"){ 
             var num = parseInt(prompt('Enter the weight'));
             weight += num;
+          }else if(cmd == "giveItem"){
+            inventory.push(eval(prompt("Enter item name...")));
+          }else if(cmd == "help"){
+            alert("\naddweight - adds weight to your total weight\nhelp - shows this message\n")
+          }  else{
+            alert("Invalid command, type help for a list of commands");
           }
-          }
-            
-          
-          
-          
-          
-          
-        
-          
+        }
       </script>
       <hr> 
       <div id="dashboard">
         <h1 id=tubbyTapper></h1>
         <button id="clicker" onclick="gainWeight()">Gain Weight</button>
-        <hr>
-        <h3 id=Info></h3>
         <hr>
         <h4 id="baseClick"></h4>
         <h4 id="clickMult"></h4>
@@ -93,17 +93,30 @@
           <img class="buttons-upgrades-clickers-img" src="assets/clickers/sapphireClicker.png">
           <span class="tooltiptext">Sapphire Clicker (1M lbs)</span>
         </button>
-        <button class="shopButton" onclick="buyUpgrade('emeraldClicker')" id="emeraldClicker">Emerald Clicker (10M) <span class="tooltiptext">Emerald Clicker (10M lbs)</span>
+        <button class="shopButton" onclick="buyUpgrade('emeraldClicker')" id="emeraldClicker">
+          <img class="buttons-upgrades-clickers-img" src="assets/clickers/emeraldClicker.png"></img>
+          <span class="tooltiptext">Emerald Clicker (10M lbs)</span>
         </button>
-        <button class="shopButton" onclick="buyUpgrade('diamondClicker')" id="diamondClicker">Diamond Clicker (100M) <span class="tooltiptext">Diamond Clicker (100M lbs)</span>
+        <button class="shopButton" onclick="buyUpgrade('diamondClicker')" id="diamondClicker">
+          <img class="buttons-upgrades-clickers-img" src="assets/clickers/diamondClicker.png"></img>
+          <span class="tooltiptext">Diamond Clicker (100M lbs)</span>
         </button>
-        <button class="shopButton" onclick="buyUpgrade('amethystClicker')" id="amethystClicker">Amethyst Clicker (1B) <span class="tooltiptext">Amethyst Clicker (1B lbs)</span>
+        <br>
+        <button class="shopButton" onclick="buyUpgrade('amethystClicker')" id="amethystClicker">
+          <img class="buttons-upgrades-clickers-img" src="assets/clickers/amethystClicker.png"></img>
+          <span class="tooltiptext">Amethyst Clicker (1B lbs)</span>
         </button>
-        <button class="shopButton" onclick="buyUpgrade('platinumClicker')" id="platinumClicker">Platinum Clicker (10B) <span class="tooltiptext">Platinum Clicker (10B lbs)</span>
+        <button class="shopButton" onclick="buyUpgrade('platinumClicker')" id="platinumClicker">
+          <img class="buttons-upgrades-clickers-img" src="assets/clickers/platinumClicker.png"></img>
+          <span class="tooltiptext">Platinum Clicker (10B lbs)</span>
         </button>
-        <button class="shopButton" onclick="buyUpgrade('plutoniumClicker')" id="plutoniumClicker">Plutonium Clicker (100B) <span class="tooltiptext">Plutonium Clicker (100B lbs)</span>
+        <button class="shopButton" onclick="buyUpgrade('plutoniumClicker')" id="plutoniumClicker">
+          <img class="buttons-upgrades-clickers-img" src="assets/clickers/plutoniumClicker.png"></img>
+          <span class="tooltiptext">Plutonium Clicker (100B lbs)</span>
         </button>
-        <button class="shopButton" onclick="buyUpgrade('opalClicker')" id="opalClicker">Opal Clicker (1T) <span class="tooltiptext">Opal Clicker (1T lbs)</span>
+        <button class="shopButton" onclick="buyUpgrade('opalClicker')" id="opalClicker">
+          <img class="buttons-upgrades-clickers-img" src="assets/clickers/opalClicker.png"></img>
+          <span class="tooltiptext">Opal Clicker (1T lbs)</span>
         </button>
         <button class="shopButton" onclick="buyUpgrade('titaniumClicker')" id="titaniumClicker">Titanium Clicker (10T) <span class="tooltiptext">Titanium Clicker (10T lbs)</span>
         </button>
@@ -119,37 +132,63 @@
         <button class="shopButton" onclick="buyUpgrade('weightGainingProgram')" id="weightGainingProgram">Weight Gaining Program (5000)</button>
         <button class="shopButton" onclick="buyUpgrade('discordServer')" id="discordServer">Discord Server (12000)</button>
         <button class="shopButton" onclick="buyUpgrade('fatImplant')" id="fatImplant">Fat Implant (25000)</button>
+        <button class="shopButton" onclick="buyUpgrade('KFC')" id="KFC">KFC (55000)</button>
+        <button class="shopButton" onclick="buyUpgrade('raidShadowLegends')" id="raidShadowLegends">Raid Shadow Legends (100k)</button>
+        <button class="shopButton" onclick="buyUpgrade('bigMac')" id="bigMac">Big Mac (187k)</button>
+        <button class="shopButton" onclick="buyUpgrade('obamaFriedChicken')" id="obamaFriedChicken">Obama Fried Chicken (350k)</button>
+        <button class="shopButton" onclick="buyUpgrade('supermassiveDonut')" id="supermassiveDonut">Supermassive Donut (590k)</button>
+        <button class="shopButton" onclick="buyUpgrade('burgerKingFranchise')" id="burgerKingFranchise">Burger King Franchise (1M)</button>
         <h3>Manager Upgrades</h3>
       </div>
       <div id="managerShop">
         <h1>Managers</h1>
         <h3>Managers help you gain weight and lose rizz automatically!</h3>
+        
         <button class="managerButton" onclick="buyManager('chefs')" id="chefs">
           <img id="img-chef" src="assets/managers/chef.png">
           <span class="buttons-manager-text" id="chefs-text">Chefs (250)</span>
         </button>
+        
         <button class="managerButton" onclick="buyManager('badHealthAdvisors')" id="badHealthAdvisors">
           <img id="img-badHealthAdvisor" src="assets/managers/badHealthAdvisor.png">
-          <span class="buttons-manager-text" id="badHealthAdvisors-text">Bad Health Advisors (1500)</span>
+          <span class="buttons-manager-text" id="badHealthAdvisors-text">Bad Health Advisors (1.5k)</span>
         </button>
+        
         <button class="managerButton" onclick="buyManager('discordMods')" id="discordMods">
           <img id="img-discordMod" src="assets/managers/discordMod.png">
-          <span class="buttons-manager-text" id="discordMods-text">Discord Mods (5000)</span>
-          <button class="managerButton" onclick="buyManager('testThing')" id="testThings">
-            <img id="img-testThing" src="assets/">
-          <span class="buttons-manager-text" id="testThing-text">Test Mods (1)</span>
-          </button>
-          
+          <span class="buttons-manager-text" id="discordMods-text">Discord Mods (5k)</span>
         </button>
+        
+        <button class="managerButton" onclick="buyManager('fatSurgeons')" id="fatSurgeons">
+          <img id="img-fatSurgeons" src="">
+          <span class="buttons-manager-text" id="fatSurgeons-text">Fat Surgeons (25k)</span>
+        </button>
+
+        <button class="managerButton" onclick="buyManager('gamers')" id="gamers">
+          <img id="img-gamers" src="">
+          <span class="buttons-manager-text" id="gamers-text">Gamers (100k)</span>
+        </button>
+          
       </div>
+
       <div id="inventory">
         <h1>Inventory</h1>
+        <div id="inventoryInner">
+
+        </div>
+        <h1>Equipment</h1>
+        <div id="equip-slot-cloak"></div>
+        <div id="equip-slot-necklace"></div>
+        <div id="equip-slot-gloves"></div>
+        <div id="equip-slot-boots"></div>
+        <div id="equip-slot-item"></div>
       </div>
+
       <div id="ascend">
         <h1>Ascend</h1>
         <h3>Sacrifice everything you have in return for extremely powerful items!</h3>
         <h2>Current ascent price: 25Qn lbs.</h2>
-        <button id="ascendButton">Ascend!</button>
+        <button onclick="ascend()", id="ascendButton">Ascend!</button>
       </div>
     </div>
   </body>

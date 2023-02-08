@@ -92,7 +92,7 @@ body{
 
 #clicker{
   background-image: url('https://freeimage.host/i/HRthY6G');
-  font-family: 'Rowdies', cursive;
+  font-family: 'Proxima Nova', sans-serif;
   border-color:gray;
   height: 250px;
   border-radius:40px;
@@ -109,7 +109,7 @@ body{
 
 #baseClick{
   font-size: 25px;
-  font-family: 'Rowdies', cursive;
+  font-family: 'Proxima Nova', sans-serif;
   color: white;
   text-align: center;
   margin-top: 100px;
@@ -117,7 +117,7 @@ body{
 
 #clickMult{
   font-size: 25px;
-  font-family: 'Rowdies', cursive;
+  font-family: 'Proxima Nova', sans-serif;
   color: white;
   text-align: center;
   margin-top: 10px;
@@ -125,7 +125,7 @@ body{
 
 #Info{
   font-size: 25px;
-  font-family: 'Rowdies', cursive;
+  font-family: 'Proxima Nova', sans-serif;
   color: white;
   text-align: center;
   margin-top: 10px;
@@ -133,7 +133,7 @@ body{
 
 #weightGainPerClick{
   font-size: 25px;
-  font-family: 'Rowdies', cursive;
+  font-family: 'Proxima Nova', sans-serif;
   color: white;
   text-align: center;
   margin-top: 10px;
@@ -141,7 +141,7 @@ body{
 
 #tubbyTapper{
   font-size: 25px;
-  font-family: 'Rowdies', cursive;
+  font-family: 'Proxima Nova', sans-serif;
   color: white;
   text-align: center;
   margin-top: 10px;
