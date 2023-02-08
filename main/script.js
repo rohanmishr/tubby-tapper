@@ -78,9 +78,6 @@ function navManagerShop(){
     }
 */
 //var weight = <?php echo $weight; ?>;
-var weight = 130;
-var rizz = 100;
-
 var clickerRank = 1;
 
 var baseWeightGain = 1;
@@ -97,6 +94,7 @@ setInterval(function(){
 
 function gainWeight(){
   weight += clickWeight;
+  on_CLICK();
 }
 
 //loop 

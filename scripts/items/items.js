@@ -26,10 +26,16 @@ var gelatinousCloak = new equipment("Gelatinous Cloak", "A cloak made of gelatin
 var tubbingtonsGauntlet = new equipment("Tubbingtons Gauntlet", "A gauntlet that harnesses the power of Tubbington himself.", "gauntlet", "uncommon", 2);
 var bootsOfTheGiant = new equipment("Boots of the Giant", "These boots have belonged to Patrick's kind for long, and have effects on weight gain.", "boots", "uncommon",2);
 
+//crafts
+var patrickStone = new item("Patrick Stone", "The essence of Patrick infuses its surroundings with his supreme weight.", "uncommon", 4);
+var patrickRing = new item("Patrick Ring", "The ring of Patrick; its weight crushes any unworthy mortal...", "rare", 10);
+var patrickArtifact = new item("Patrick Artifact", "A notable example of unfathomable mass and density.", "epic", 25);
+var soulOfPatrick = new item("Soul of Patrick", "Lo, and behold! The most massive, the most dense being in the land. The Earth rumbles under his supreme weight.", "legendary", 100);
+
 setInterval(function(){
     document.getElementById("inventoryInner").innerHTML = "";
     for(var i = 0; i<inventory.length; i++){
-        document.getElementById("inventoryInner").innerHTML += "<button class='inventory-button"+inventory[i].rarity+"'>"+inventory[i].name+"</button>"
+        document.getElementById("inventoryInner").innerHTML += "<button class='inventory-button "+inventory[i].rarity+"'>"+inventory[i].name+"</button>"
     }
 })
 

@@ -16,6 +16,9 @@
     <script src="scripts/saveData.js"></script>
     <script src="scripts/achievements.js"></script>
     <script src="scripts/items/items.js"></script>
+    <script src="scripts/events.js"></script>
+    <script src="scripts/items/crafting.js"></script>
+    <script src="scripts/items/resources.js"></script>
   </head>
   <body>
     <!--top!-->
@@ -43,13 +46,14 @@
         <button onclick="onClick()", id="devConsole">Commands</button> 
       </div>
       <script>
-        
         function onClick() {
-          cmd = window.prompt("Pleae type in your command");
+          cmd = window.prompt("Please type in your command");
           
           if(cmd == "addweight"){ 
             var num = parseInt(prompt('Enter the weight'));
             weight += num;
+          }else if(cmd == "giveItem"){
+            inventory.push(eval(prompt("Enter item name...")));
           }else if(cmd == "help"){
             alert("\naddweight - adds weight to your total weight\nhelp - shows this message\n")
           }  else{
@@ -166,6 +170,12 @@
         <div id="inventoryInner">
 
         </div>
+        <h1>Equipment</h1>
+        <div id="equip-slot-cloak"></div>
+        <div id="equip-slot-necklace"></div>
+        <div id="equip-slot-gloves"></div>
+        <div id="equip-slot-boots"></div>
+        <div id="equip-slot-item"></div>
       </div>
 
       <div id="ascend">

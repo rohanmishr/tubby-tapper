@@ -1,6 +1,6 @@
 .inventory-button{
-    width: 50px;
-    height: 50px;
+    width: 70px;
+    height: 70px;
     border-radius: 10px;
     border: solid 5px;
 }
@@ -10,7 +10,7 @@
 }
 
 .inventory-button uncommon{
-    border: solid #52ff61
+    border: solid #52ff61 5px;
 }
 
 .inventory-button rare{
