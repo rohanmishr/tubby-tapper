@@ -1,3 +1,5 @@
+var gamescore = 0;
+
 var weight = 130;
 var rizz = 100;
 

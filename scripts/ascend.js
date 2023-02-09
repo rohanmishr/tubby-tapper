@@ -17,15 +17,22 @@ function ascend(){
 }
 
 //refer to items.js for ascent items list
+var loot10 = [];
+var loot100 = [];
+var loot1000 = [];
+var loot10000 = [];
 function ascendLoot(life){
     var hasNotChosenItem = true;
-    //sub 10 loot
     if(life < 10){
 
     }
-    //sub 100 loot
+    if(life < 100){
 
-    //sub 1000 loot
-    
-    //sub 10000 loot
+    }
+    if(life < 1000){
+
+    }
+    if(life < 10000){
+        
+    }
 }

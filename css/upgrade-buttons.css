@@ -5,7 +5,7 @@
     height:50px;
     width:50px;
     position: relative;
-    display: inline-block;
+    display: inline;
     border-width: 3px;
     border-style: solid;
     border-color: gray;
@@ -91,5 +91,9 @@
 .shopButton:hover .tooltiptext, .managerButton:hover .tooltiptext{
     visibility: visible;
     opacity: 1;
+}
+
+#clickers, #clickers2, #clickers3{
+  display: flex;
 }
 

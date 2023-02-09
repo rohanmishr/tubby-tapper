@@ -70,6 +70,26 @@ function buyUpgrade(upgrade){
       baseWeightGain = 6103515625;
       clickerRank = 15;
       $("#firecrystalClicker").css("display","none");
+  }else if(upgrade == "uraniumClicker" && weight >= decodeNum('10qd')){
+      weight -= decodeNum('10qd');
+      baseWeightGain = 30517578125;
+      clickerRank = 16;
+      $("#uraniumClicker").css("display","none");
+  }else if(upgrade == "gammaClicker" && weight >= decodeNum('100qd')){
+      weight -= decodeNum('100qd');
+      baseWeightGain = 152587890625;
+      clickerRank = 17;
+      $("#gammaClicker").css("display","none");
+  }else if(upgrade == "darkMatterClicker" && weight >= decodeNum('1Qn')){
+      weight -= decodeNum('1Qn');
+      baseWeightGain = 762939453125;
+      clickerRank = 18;
+      $("#darkMatterClicker").css("display","none");
+  }else if(upgrade == "ecuadorianClicker" && weight >= decodeNum('10Qn')){
+      weight -= decodeNum('10Qn');
+      baseWeightGain = 3814697265625;
+      clickerRank = 19;
+      $("#ecuadorianClicker").css("display","none");
   //overall upgrades
   }else if(upgrade == "packagedChips" && weight >= 200){
     weight -= 200;

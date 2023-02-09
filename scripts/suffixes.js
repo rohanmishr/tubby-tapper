@@ -12,15 +12,17 @@ function abbvNum(N, G) {
 }
 
 function decodeNum(N) {
-    for (var G = 0; G < N.length; G++)
+    for (var G = 0; G < N.length; G++){
         if ("0" != N.charAt(G) && "1" != N.charAt(G) && "2" != N.charAt(G) && "3" != N.charAt(G) && "4" != N.charAt(G) && "5" != N.charAt(G) && "6" != N.charAt(G) && "7" != N.charAt(G) && "8" != N.charAt(G) && "9" != N.charAt(G)) {
             nA = N.charAt(G - 3),
                 nB = N.charAt(G - 2), nC = N.charAt(G - 1), dA = N.charAt(G), dB = N.charAt(G + 1), dC = N.charAt(G + 2), dD = N.charAt(G + 3), dE = N.charAt(G + 4), dF = N.charAt(G + 5), dG = N.charAt(G + 6), dH = N.charAt(G + 7), dI = N.charAt(G + 8), dJ = N.charAt(G + 9), suffix = dA + dB + dC + dD + dE + dF + dG + dH + dI + dJ,
                 val = parseInt(nA + nB + nC);
-            for (var T = 0; T < suffixes.length; T++)
+            for (var T = 0; T < suffixes.length; T++){
                 if (suffix == suffixes[T]) {
                     var L = 3 * T;
                     return val * Math.pow(10, L)
                 }
+            }
         }
+    }
 }

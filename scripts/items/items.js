@@ -22,6 +22,13 @@ var relicOfLowIntelligence = new item("Relic of Low Intelligence", "Patrick's lo
 
 //ascent items
 var patrickAltar = new item("Patrick Altar", "Those who were faithful to their quest for weight devoted themselves to a figure of Patrick himself.", "heavenly", 5);
+var superWhopper = new item("Super Whopper", "A burger so huge that only the most massive can consume it.", "heavenly", 3);
+var tubbington1000 = new item("Tubbington 1000", "The power of tubbington runs this machine.", "heavenly", 4);
+
+//angelic items (evos)
+var patrickTemple = new item("Patrick Temple", "Hail, for he is the most massive of them all!", "angelic", 25);
+var omegaWhopper = new item("Omega Whopper", "The most massive burger in the universe.", "angelic", 15);
+var tubbington2000 = new item("Tubbington 2000", "A marvel of modern day engineering allows users to gain weight at fast speeds!", "angelic", 20);
 
 //EQUIPMENTS: necklace, cloak, gauntlet, boots
 var rizzNegator = new equipment("Rizz Negator", "The necklace seems to curse the wearer with reduced rizz.", "necklace", "uncommon", 2);

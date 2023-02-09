@@ -36,8 +36,9 @@ function on_CLICK(){
 
 function on_UPGRADEBUY(){
     if(rng(0.01)){
-        alert("")
+        alert("SUPER RARE DROP: idk")
     }
+    gamescore++;
 }
 
 function on_MANAGERBUY(){

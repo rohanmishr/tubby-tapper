@@ -73,6 +73,7 @@
       <div id="upgradeShop">
         <h1>Upgrades</h1>
         <h3>Clicker Upgrades</h3>
+        <div id="clickers">
         <button class="shopButton" onclick="buyUpgrade('bronzeClicker')" id="bronzeClicker">
           <img class="buttons-upgrades-clickers-img" src="assets/clickers/bronzeClicker.png"></img>
           <span class="tooltiptext">Bronze Clicker (250 lbs)</span>
@@ -101,7 +102,8 @@
           <img class="buttons-upgrades-clickers-img" src="assets/clickers/diamondClicker.png"></img>
           <span class="tooltiptext">Diamond Clicker (100M lbs)</span>
         </button>
-        <br>
+        </div>
+        <div id="clickers2">
         <button class="shopButton" onclick="buyUpgrade('amethystClicker')" id="amethystClicker">
           <img class="buttons-upgrades-clickers-img" src="assets/clickers/amethystClicker.png"></img>
           <span class="tooltiptext">Amethyst Clicker (1B lbs)</span>
@@ -123,7 +125,18 @@
         <button class="shopButton" onclick="buyUpgrade('mithrilClicker')" id="mithrilClicker">Mithril Clicker (100T) <span class="tooltiptext">Mithril Clicker (100T lbs)</span>
         </button>
         <button class="shopButton" onclick="buyUpgrade('firecrystalClicker')" id="firecrystalClicker">Firecrystal Clicker (1qd) <span class="tooltiptext">Firecrystal Clicker (1qd lbs)</span>
+        </button><br>
+        </div>
+        <div id="clickers3">
+        <button class="shopButton" onclick="buyUpgrade('uraniumClicker')" id="uraniumClicker">Uranium Clicker (10qd) <span class="tooltiptext">Uranium Clicker (10qd lbs)</span>
         </button>
+        <button class="shopButton" onclick="buyUpgrade('gammaClicker')" id="gammaClicker">Gamma Clicker (100qd) <span class="tooltiptext">Gamma Clicker (100qd lbs)</span>
+        </button>
+        <button class="shopButton" onclick="buyUpgrade('darkMatterClicker')" id="darkMatterClicker">Dark Matter Clicker (1Qn) <span class="tooltiptext">Dark Matter Clicker (1Qn lbs)</span>
+        </button>
+        <button class="shopButton" onclick="buyUpgrade('ecuadorianClicker')" id="ecuadorianClicker">Ecuadorian Clicker (10Qn) <span class="tooltiptext">Ecuadorian Clicker (10Qn lbs)</span>
+        </button>
+        </div>
         <h3>Overall Upgrades</h3>
         <button class="shopButton" onclick="buyUpgrade('packagedChips')" id="packagedChips">Packaged Chips (200)</button>
         <button class="shopButton" onclick="buyUpgrade('burgersAndFries')" id="burgersAndFries">Burgers and Fries (500)</button>
