@@ -1,5 +1,5 @@
-# patrick-clicker (WIP)
+# Tubby Tapper
 
 ## based on a true story
 
-gain weight, lose rizz, and become the ultimate patrick
+gain weight and lose rizz
